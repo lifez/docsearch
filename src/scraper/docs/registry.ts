@@ -15,6 +15,8 @@ import { dockerConfig } from "./docker.ts";
 import { swiftConfig, swiftDoccConfig } from "./swift.ts";
 import { kotlinAndroidConfig } from "./kotlin-android.ts";
 import { swiftuiConfig, swiftuiDoccConfig, uikitConfig, uikitDoccConfig } from "./ios.ts";
+import { expressConfig5, expressConfig4 } from "./express.ts";
+import { apolloServerConfig4 } from "./apollo-server.ts";
 import type { DoccConfig } from "../docc.ts";
 
 export interface DocEntry {
@@ -137,6 +139,18 @@ export const DOCS: Record<string, DocEntry> = {
     config: uikitConfig,
     description: "UIKit framework documentation (Apple)",
     customScraper: doccScraper(uikitDoccConfig),
+  },
+  "express/5": {
+    config: expressConfig5,
+    description: "Express.js v5 API and guide documentation",
+  },
+  "express/4": {
+    config: expressConfig4,
+    description: "Express.js v4 API and guide documentation",
+  },
+  "apollo-server/4": {
+    config: apolloServerConfig4,
+    description: "Apollo Server v4 GraphQL documentation",
   },
 };
 
