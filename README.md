@@ -30,7 +30,7 @@ Scrape HTML → Filter & convert to Markdown → Index with qmd → Search via C
 ### Install
 
 ```bash
-git clone <repo-url> && cd docsearch
+git clone git@github.com:lifez/docsearch.git && cd docsearch
 bun install
 bun link        # registers the `docsearch` command globally
 ```

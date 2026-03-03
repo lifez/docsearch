@@ -1,0 +1,21 @@
+{
+  "name": "docsearch",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "docsearch": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/turndown": "^5.0.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "p-limit": "^7.3.0",
+    "turndown": "^7.2.2"
+  }
+}
