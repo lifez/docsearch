@@ -2,4 +2,4 @@
 .bundle
 example
 node_modules/
-docs/
+/docs/

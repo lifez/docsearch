@@ -12,6 +12,10 @@ export async function scrapeCommand(docName: string): Promise<void> {
     process.exit(1);
   }
 
-  await scrape(entry.config);
+  if (entry.customScraper) {
+    await entry.customScraper();
+  } else {
+    await scrape(entry.config);
+  }
   await indexDoc(docName, getDocDir(docName), entry.description);
 }
