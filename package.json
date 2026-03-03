@@ -1,11 +1,15 @@
 {
   "name": "docsearch",
-  "module": "index.ts",
+  "version": "0.1.0",
+  "description": "CLI tool that scrapes developer docs, converts to markdown, and indexes for local semantic search",
   "type": "module",
-  "private": true,
   "bin": {
     "docsearch": "./src/index.ts"
   },
+  "files": [
+    "src",
+    "skills"
+  ],
   "devDependencies": {
     "@types/bun": "latest",
     "@types/turndown": "^5.0.6"

@@ -1,3 +1,4 @@
+#!/usr/bin/env bun
 import { scrapeCommand } from "./commands/scrape.ts";
 import { indexCommand } from "./commands/index.ts";
 import { searchCommand } from "./commands/search.ts";
