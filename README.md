@@ -29,6 +29,14 @@ Scrape HTML → Filter & convert to Markdown → Index with qmd → Search via C
 
 ### Install
 
+**Global install (recommended):**
+
+```bash
+bun add -g github:lifez/docsearch
+```
+
+**Or from source:**
+
 ```bash
 git clone git@github.com:lifez/docsearch.git && cd docsearch
 bun install
@@ -95,6 +103,12 @@ The skill searches, retrieves full docs, and synthesizes an answer with source c
 | **django** | 5.2, 5.1 | Django documentation |
 | **postgresql** | 17, 16 | PostgreSQL documentation |
 | **docker** | latest | Docker documentation |
+| **swift** | 6 | The Swift Programming Language |
+| **kotlin-android** | latest | Kotlin for Android development |
+| **ios-swiftui** | latest | SwiftUI framework documentation |
+| **ios-uikit** | latest | UIKit framework documentation |
+| **express** | 5, 4 | Express.js API documentation |
+| **apollo-server** | 4 | Apollo Server GraphQL documentation |
 
 Use `docsearch list` to see which docs you've scraped locally.
 
