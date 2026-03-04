@@ -7,7 +7,7 @@ import { readCommand } from "./commands/read.ts";
 import { getCommand } from "./commands/get.ts";
 
 const USAGE = `Usage:
-  docsearch scrape <doc>         Scrape docs to markdown (e.g. node/22, nextjs/14)
+  docsearch scrape <doc> [--force]  Scrape docs to markdown (--force for full re-scrape)
   docsearch index <doc>          Index with qmd (e.g. node/22, bun/1)
   docsearch search <query>       Search indexed docs (-c node/22)
   docsearch get <docid>          Get full document by docid
@@ -25,7 +25,8 @@ switch (command) {
       process.stderr.write("Error: missing <doc> argument\n");
       process.exit(1);
     }
-    await scrapeCommand(doc);
+    const force = args.includes("--force");
+    await scrapeCommand(doc, { force });
     break;
   }
 

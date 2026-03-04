@@ -4,7 +4,10 @@ import { getDocDir } from "../config.ts";
 import { DOCS, docNames } from "../scraper/docs/registry.ts";
 import { log } from "../utils/logger.ts";
 
-export async function scrapeCommand(docName: string): Promise<void> {
+export async function scrapeCommand(
+  docName: string,
+  options: { force?: boolean } = {}
+): Promise<void> {
   const entry = DOCS[docName];
 
   if (!entry) {
@@ -15,7 +18,7 @@ export async function scrapeCommand(docName: string): Promise<void> {
   if (entry.customScraper) {
     await entry.customScraper();
   } else {
-    await scrape(entry.config);
+    await scrape(entry.config, { force: options.force });
   }
   await indexDoc(docName, getDocDir(docName), entry.description);
 }
