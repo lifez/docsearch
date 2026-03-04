@@ -25,7 +25,7 @@ Scrape HTML → Filter & convert to Markdown → Index with qmd → Search via C
 ### Prerequisites
 
 - [Bun](https://bun.sh) — `curl -fsSL https://bun.sh/install | bash`
-- [qmd](https://github.com/tobi/qmd) — `bun install -g qmd`
+- [qmd](https://github.com/tobi/qmd) — `bun install -g @tobilu/qmd`
 
 ### Install
 
