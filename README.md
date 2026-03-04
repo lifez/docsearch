@@ -6,7 +6,7 @@ Scrape, index, and search developer docs locally. Integrates with Claude Code vi
 
 Developer docs live across dozens of websites with different structures. When coding, you constantly context-switch to a browser to look things up. AI assistants like Claude Code don't have access to the latest version-specific docs.
 
-docsearch solves this by scraping docs to markdown, indexing them locally with [qmd](https://github.com/qmdnls/qmd), and exposing them to Claude Code as a `/docs` skill — so your AI assistant can search and cite real documentation inline.
+docsearch solves this by scraping docs to markdown, indexing them locally with [qmd](https://github.com/tobi/qmd), and exposing them to Claude Code as a `/docs` skill — so your AI assistant can search and cite real documentation inline.
 
 ## How It Works
 
@@ -25,7 +25,7 @@ Scrape HTML → Filter & convert to Markdown → Index with qmd → Search via C
 ### Prerequisites
 
 - [Bun](https://bun.sh) — `curl -fsSL https://bun.sh/install | bash`
-- [qmd](https://github.com/qmdnls/qmd) — `bun install -g qmd`
+- [qmd](https://github.com/tobi/qmd) — `bun install -g qmd`
 
 ### Install
 
